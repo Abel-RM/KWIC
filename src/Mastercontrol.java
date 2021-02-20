@@ -1,14 +1,6 @@
-import java.util.Scanner;
-
 public class Mastercontrol {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Lines lines = new Lines();
-        CircularShift circularShift = new CircularShift();
+        Input.leer("C:\\Users\\abely\\Desktop\\Maestria\\semestre 2\\Arquitectura\\Proyectos\\Proyecto1\\src\\input.txt");
 
-        System.out.println("Escribe algo:");
-        String g = sc.nextLine();
-        lines.addObserver(circularShift);
-        lines.insert(g);
     }
 }

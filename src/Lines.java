@@ -15,4 +15,8 @@ public class Lines extends Observable {
         setChanged();
         notifyObservers(linea);
     }
+    public void delete(String linea){
+        lineas.remove(linea);
+
+    }
 }
