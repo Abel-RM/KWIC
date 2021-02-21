@@ -3,7 +3,7 @@ import java.util.Observable;
 
 @SuppressWarnings("deprecation")
 public class Lines extends Observable {
-    ArrayList<String> lineas = new ArrayList<>();
+    private final ArrayList<String> lineas = new ArrayList<>();
 
     @Override
     public synchronized void setChanged() {
@@ -15,8 +15,8 @@ public class Lines extends Observable {
         setChanged();
         notifyObservers(linea);
     }
-    public void delete(String linea){
-        lineas.remove(linea);
 
+    public ArrayList<String> getAll(){
+        return lineas;
     }
 }

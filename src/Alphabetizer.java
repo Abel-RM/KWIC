@@ -5,16 +5,15 @@ import java.util.Observer;
 
 @SuppressWarnings("deprecation")
 public class Alphabetizer implements Observer {
-    ArrayList<String> lineas = new ArrayList<>();
+    private final Lines lineas;
+
+    public Alphabetizer(Lines lineas) {
+        this.lineas = lineas;
+    }
 
     @Override
     public void update(Observable o, Object arg) {
-        String linea=arg.toString();
-        lineas.add(linea);
-        Collections.sort(lineas);
+        Collections.sort(lineas.getAll());
     }
 
-    public ArrayList<String> getLineas() {
-        return lineas;
-    }
 }

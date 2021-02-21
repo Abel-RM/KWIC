@@ -3,10 +3,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Input {
-   private static Lines lines=new Lines();
-    public static void leer(String ruta){
-        CircularShift cs=new CircularShift();
-        lines.addObserver(cs);
+    public static void leer(String ruta, Lines lines){
+
         Scanner scanner = null;
         try {
             scanner = new Scanner(new File(ruta));
@@ -16,6 +14,6 @@ public class Input {
         while (scanner.hasNextLine()) {
             lines.insert(scanner.nextLine());
         }
-        Output.escribir(cs.getAlphabetizer().getLineas());
+
     }
 }
