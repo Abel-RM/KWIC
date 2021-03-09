@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Input {
-    public static void leer(String ruta, Lines lines){
+    public static void leer(String ruta, Line lines){
 
         Scanner scanner = null;
         try {
@@ -12,7 +12,9 @@ public class Input {
             e.printStackTrace();
         }
         while (scanner.hasNextLine()) {
-            lines.insert(scanner.nextLine());
+            String l = scanner.nextLine();
+            if (!lines.getAll().contains(l))
+                lines.insert(l);
         }
 
     }

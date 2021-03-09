@@ -1,8 +1,10 @@
-del funcionamiento prueba 
-del programa 
-es una esta 
-esta es una 
-funcionamiento prueba del 
-programa del 
-prueba del funcionamiento 
-una esta es 
+tipo con otro 
+prueb@ es $esta 
+otro tipo con 
+otra linea 
+linea otra 
+es $esta prueb@ 
+De car?acte23res* 
+con otro tipo 
+car?acte23res* De 
+$esta prueb@ es 

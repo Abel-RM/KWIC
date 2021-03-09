@@ -1,19 +1,24 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.*;
 
 @SuppressWarnings("deprecation")
 public class Alphabetizer implements Observer {
-    private final Lines lineas;
+    class Ordenamiento implements Comparator<String> {
 
-    public Alphabetizer(Lines lineas) {
+        @Override
+        public int compare(String o1, String o2) {
+            return o1.toLowerCase().compareTo(o2.toLowerCase());
+        }
+    }
+
+    private final Line lineas;
+
+    public Alphabetizer(Line lineas) {
         this.lineas = lineas;
     }
 
     @Override
     public void update(Observable o, Object arg) {
-        Collections.sort(lineas.getAll());
+        lineas.getAll().sort(new Ordenamiento());
     }
 
 }
